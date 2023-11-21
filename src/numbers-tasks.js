@@ -53,9 +53,6 @@ function getCircleCircumference(radius) {
  *  -3, 3  => 0
  */
 function getAverage(value1, value2) {
-  if (value1 === Number. MAX_VALUE && value2 === BNumber. MAX_VALUE) {
-    return 0;
-  }
   const sum = value1 + value2;
   const average = sum / 2;
   return average;
@@ -195,8 +192,9 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 2  => 1700
  *   1678, 3  => 2000
  */
-function roundToPowerOfTen(/* num, pow */) {
-  throw new Error('Not implemented');
+function roundToPowerOfTen(num, pow) {
+  const powerOfTen = 10 ** pow;
+  return Math.round(num / powerOfTen) * powerOfTen;
 }
 
 /**
